@@ -1,0 +1,4 @@
+#Mon Sep 09 20:36:16 BRT 2019
+base.0=C\:\\Users\\Pessoal\\Downloads\\CalculadoraFCV\\CalculadoraFCV\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex
