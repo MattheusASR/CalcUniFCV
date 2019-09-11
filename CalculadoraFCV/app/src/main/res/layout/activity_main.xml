@@ -2,53 +2,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:backgroundTintMode="add"
+    android:clickable="false"
+    android:foregroundTintMode="add"
+    android:isScrollContainer="false"
+    android:orientation="vertical">
+
     <TextView
         android:id="@+id/resultado"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="80dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:gravity="center"
         android:scrollHorizontally="true"
-        android:textSize="40dp"/>
-
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="0dp"
-    android:gravity="center">
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="90dp"
-        android:layout_height="80dp"
-        android:text="7"
-        android:textSize="40dp"
-        android:onClick="adicionarNumero"/>
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="90dp"
-        android:layout_height="80dp"
-        android:text="8"
-        android:textSize="40dp"
-        android:onClick="adicionarNumero"/>
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="90dp"
-        android:layout_height="80dp"
-        android:text="9"
-        android:textSize="40dp"
-        android:onClick="adicionarNumero"/>
-
-    <Button
-        android:id="@+id/buttonDiv"
-        android:layout_width="90dp"
-        android:layout_height="80dp"
-        android:text="÷"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary"
         android:textSize="40dp" />
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="7"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="8"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="9"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="÷"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,73 +79,93 @@
             android:id="@+id/button4"
             android:layout_width="90dp"
             android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="4"
-            android:textSize="40dp"
-            android:onClick="adicionarNumero"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="90dp"
             android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="5"
-            android:textSize="40dp"
-            android:onClick="adicionarNumero"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="90dp"
             android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="6"
-            android:textSize="40dp"
-            android:onClick="adicionarNumero"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/buttonMult"
             android:layout_width="90dp"
             android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="x"
+            android:textColor="@color/colorPrimary"
             android:textSize="30dp" />
 
     </LinearLayout>
 
 
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_marginTop="0dp"
-android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center">
 
-<Button
-    android:id="@+id/button1"
-    android:layout_width="90dp"
-    android:layout_height="80dp"
-    android:text="1"
-    android:textSize="40dp"
-    android:onClick="adicionarNumero"/>
-<Button
-    android:id="@+id/button2"
-    android:layout_width="90dp"
-    android:layout_height="80dp"
-    android:text="2"
-    android:textSize="40dp"
-    android:onClick="adicionarNumero"/>
-<Button
-    android:id="@+id/button3"
-    android:layout_width="90dp"
-    android:layout_height="80dp"
-    android:text="3"
-    android:textSize="40dp"
-    android:onClick="adicionarNumero"/>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
 
-    <Button
-        android:id="@+id/buttonSoma"
-        android:layout_width="90dp"
-        android:layout_height="80dp"
-        android:text="+"
-        android:textSize="40dp" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="2"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="3"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/buttonSoma"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
+            android:text="+"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
 
 
-</LinearLayout>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -137,33 +176,43 @@ android:gravity="center">
 
         <Button
             android:id="@+id/buttonLimpar"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="90dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="C"
+            android:textColor="@color/colorPrimary"
             android:textSize="40dp" />
 
         <Button
-            android:id="@+id/buttonZero"
-            android:layout_width="wrap_content"
+            android:id="@+id/button0"
+            android:layout_width="90dp"
             android:layout_height="90dp"
-            android:onClick="adicionarNumero"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="0"
+            android:textColor="@color/colorPrimary"
             android:textSize="40dp" />
 
         <Button
             android:id="@+id/buttonPonto"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="90dp"
-            android:onClick="adicionarNumero"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="."
+            android:textColor="@color/colorPrimary"
             android:textSize="40dp" />
+
         <Button
             android:id="@+id/buttonSubt"
             android:layout_width="90dp"
             android:layout_height="90dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="-"
+            android:textColor="@color/colorPrimary"
             android:textSize="40dp" />
-
 
 
     </LinearLayout>
@@ -176,11 +225,14 @@ android:gravity="center">
 
         <Button
             android:id="@+id/buttonIgual"
-            android:layout_width="350dp"
+            android:layout_width="360dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="0dp"
+            android:background="@color/colorAccent"
+            android:onClick="onClick"
             android:text="="
-            android:textSize="40dp"
-            android:layout_marginLeft="0dp"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp" />
 
     </LinearLayout>
 

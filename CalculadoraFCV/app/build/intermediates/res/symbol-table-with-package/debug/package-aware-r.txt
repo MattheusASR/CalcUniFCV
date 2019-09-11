@@ -343,6 +343,7 @@ attr windowNoTitle
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
+color Color_Title
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -678,6 +679,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button0
 id button1
 id button2
 id button3
@@ -695,7 +697,6 @@ id buttonPanel
 id buttonPonto
 id buttonSoma
 id buttonSubt
-id buttonZero
 id center
 id center_horizontal
 id center_vertical
