@@ -7,7 +7,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,41 +15,45 @@ public class MainActivity extends AppCompatActivity{
     Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9,
             buttonSoma, buttonSubt, buttonMult, buttonDiv, buttonlimpar, buttonIgual, buttonPonto;
 
-    TextView resultado;
 
     float valor1, valor2;
 
-    boolean Divisao, Multiplicacao, Adicao, Subtracao;
+    boolean Divisao,
+            Multiplicacao,
+            Adicao,
+            Subtracao;
+
+    TextView resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
-        button4 = (Button) findViewById(R.id.button4);
-        button5 = (Button) findViewById(R.id.button5);
-        button6 = (Button) findViewById(R.id.button6);
-        button7 = (Button) findViewById(R.id.button7);
-        button8 = (Button) findViewById(R.id.button8);
-        button9 = (Button) findViewById(R.id.button9);
-        button0 = (Button) findViewById(R.id.button0);
-        buttonlimpar = (Button) findViewById(R.id.buttonLimpar);
-        buttonDiv = (Button) findViewById(R.id.buttonDiv);
-        buttonIgual = (Button) findViewById(R.id.buttonIgual);
-        buttonSoma = (Button) findViewById(R.id.buttonSoma);
-        buttonSubt = (Button) findViewById(R.id.buttonSubt);
-        buttonMult = (Button) findViewById(R.id.buttonMult);
-        buttonPonto = (Button) findViewById(R.id.buttonPonto);
-        resultado = (TextView) findViewById(R.id.resultado);
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
+        button5 = findViewById(R.id.button5);
+        button6 = findViewById(R.id.button6);
+        button7 = findViewById(R.id.button7);
+        button8 = findViewById(R.id.button8);
+        button9 = findViewById(R.id.button9);
+        button0 = findViewById(R.id.button0);
+        buttonlimpar = findViewById(R.id.buttonLimpar);
+        buttonDiv = findViewById(R.id.buttonDiv);
+        buttonIgual = findViewById(R.id.buttonIgual);
+        buttonSoma = findViewById(R.id.buttonSoma);
+        buttonSubt = findViewById(R.id.buttonSubt);
+        buttonMult = findViewById(R.id.buttonMult);
+        buttonPonto = findViewById(R.id.buttonPonto);
+        resultado = findViewById(R.id.resultado);
 
        resultado.addTextChangedListener(new TextWatcher() {
-           @Override
-           public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-           }
+            }
 
             @Override
             public void onTextChanged(CharSequence s, int start,
@@ -65,11 +68,11 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
 
-           @Override
-           public void afterTextChanged(Editable editable) {
+            @Override
+            public void afterTextChanged(Editable editable) {
 
-           }
-       });
+            }
+        });
 
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -219,8 +222,10 @@ public class MainActivity extends AppCompatActivity{
 
                 if (Divisao == true){
 
-                    if (valor2 == 0){
-                        Toast.makeText(getApplicationContext(), "NÃO É POSSIVEL DIVISÃO POR ZERO.", Toast.LENGTH_SHORT).show();
+                    if (valor1 == 0 && valor2 == 0){
+                        Toast.makeText(getApplicationContext(), "RESULTADO INDEFINIDO", Toast.LENGTH_SHORT).show();
+                    } else if (valor2 == 0) {
+                        Toast.makeText(getApplicationContext(), "NÃO É POSSIVEL DIVIDIR POR ZERO.", Toast.LENGTH_SHORT).show();
                     } else {
                         resultado.setText(valor1 / valor2 + "");
                         Divisao = false;
@@ -243,82 +248,3 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 }
-
-//    int i = 0;
-//    int count = 0;
-//    int[] Result;
-//    float Total = 0;
-//
-//    float valor, valor1, valor2;
-//
-//    String operator;
-//    TextView resultado;
-//
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//        Result = new int[2];
-//        resultado = (TextView) findViewById(R.id.resultado);
-//    }
-//    public void adicionarNumero(View view) {
-//        String numero = ((TextView) view).getText().toString();
-//        TextView resultado = ((TextView) findViewById(R.id.resultado));
-//        resultado.setText(resultado.getText() + numero);
-//    }
-//
-//    @Override
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case R.id.buttonSoma: operator = "soma";
-//                calcular();
-//                proximoNumero();
-//                break;
-//            case R.id.buttonSubt: operator = "sub";
-//                calcular();
-//                proximoNumero();
-//                break;
-//            case R.id.buttonMult: operator = "mult";
-//                calcular();
-//                proximoNumero();
-//                break;
-//            case R.id.buttonDiv: operator = "div";
-//                calcular();
-//                proximoNumero();
-//                break;
-//            case R.id.buttonIgual: Igual();
-//                count = 0;
-//                break;
-//            case R.id.buttonLimpar: limpar(view);
-//                break;
-//        }
-//
-//        Total = 0;
-//    }
-//
-//
-//    private void proximoNumero() {
-//        count = 0;
-//        i = 1;
-//    }
-//
-//    private void Igual(){
-//        valor = Float.parseFloat(resultado.getText()+"");
-//    }
-//
-//    private void limpar(View view) {
-//        resultado.setText("");
-//    }
-//
-//    private void calcular() {
-//        switch (operator){
-//            case "soma": Total = valor1 + valor2; break;
-//            case "sub": Total = valor1 - valor2; break;
-//            case "mult": Total = valor1 * valor2; break;
-//            case "div": Total = valor1 / valor2; break;
-//        }
-//
-//
-//    }
-//}
